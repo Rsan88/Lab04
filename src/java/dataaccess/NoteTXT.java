@@ -13,11 +13,10 @@ import models.Note;
 
 /**
  *
- * @author Jaren
+ * @author Raj
  */
 public class NoteTXT {
-    
-    //Content from Note text file
+
     private final String path;
     
     public NoteTXT(String textFilePath) {
@@ -30,23 +29,17 @@ public class NoteTXT {
         Note readNote=null;
         String noteTitle="";
         String noteContent="";
-        
-        
-        //Read the text file
-        // to read files
+
         BufferedReader br = new BufferedReader(new FileReader(new File(path)));
         
-        // loop through the 'note.txt' file to create Notes to add to a list
         String currentLine = "";
         double lineCount = 0;
         int noteNumber = 0;
         while ((currentLine = br.readLine()) != null) {
             lineCount++;
             if ((lineCount / 2) == 0.5) {
-                // First number for titles
                 noteTitle = currentLine;
             } else if ((lineCount / 2) == 1.0) {
-                // Second number for content
                 noteNumber++;
                 noteContent = currentLine;
                 lineCount = 0;
@@ -56,18 +49,16 @@ public class NoteTXT {
         br.close();
         
         return readNote;
-    } // end of readNoteFile
+    }
     
     
     public void writeNote(Note edited) throws IOException {
-    
-        // Write new text to text file
-        // to write to a fileFileWriter(path, false)));
+
         PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, false)));
         
         pw.println(edited.getTitle());
         pw.print(edited.getContent());
         
         pw.close();
-    } // end of writeNote
+    } 
 }

@@ -1,7 +1,7 @@
 <%-- 
     Document   : editnote
-    Created on : 24-Feb-2022, 5:59:04 PM
-    Author     : Jaren
+    Created on : 7-Apr-2022, 2:03:54 PM
+    Author     : Raj
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -16,19 +16,13 @@
     <body>
         
         <h1>Simple Note Keeper</h1>
-        
-        <h2>Edit Note</h2>
-        
-        <div>
-            
-            <form action="note" method="post">
-                
+         <h2>Edit Note</h2>
+
+            <form action="note" method="post">   
                 Title: <input type="text" name="title" value="${note.title}"><br>
                 Contents: <textarea name="contents">${note.content}</textarea><br>
-                <input type="submit" name="save" value="Save">
-                
+                <input type="submit" name="save" value="Save">  
             </form>
-            
-        </div>
+     
     </body>
 </html>

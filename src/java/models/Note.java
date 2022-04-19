@@ -7,7 +7,7 @@ package models;
 
 /**
  *
- * @author Jaren
+ * @author Raj
  */
 public class Note {
     

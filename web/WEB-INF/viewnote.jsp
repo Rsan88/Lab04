@@ -1,7 +1,7 @@
 <%-- 
-    Document   : viewnote
-    Created on : 24-Feb-2022, 5:57:49 PM
-    Author     : Jaren
+     Document   : viewnote
+    Created on : 7-Apr-2022, 2:03:54 PM
+    Author     : Raj
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -14,19 +14,14 @@
         <title>Simple Note Keeper - View</title>
     </head>
     <body>
-        
-        <h1>Simple Note Keeper</h1>
-        
+        <h1>Simple Note Keeper</h1>     
         <h2>View Note</h2>
-        
-        <div>
-            <p><b>Title:</b> ${note.title}<br></p>
+   
+            <p><b>Title:</b> ${note.getTitle()}<br></p>
             
             <p><b>Contents:</b><br>
-            ${note.content}</p>
-            
+            ${note.getContent()}</p>
             <a href="note?edit">Edit</a>
-        </div>
         
     </body>
 </html>
